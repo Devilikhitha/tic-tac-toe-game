@@ -1,4 +1,5 @@
-*{
+
+* {
     margin: 0;
     padding: 0;
 }
@@ -8,9 +9,9 @@ body {
     text-align: center;
 }
 
-.container{
+.container {
     height: 70vh;
-   
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,57 +25,147 @@ body {
     justify-content: center;
     align-items: center;
     gap: 1.5vmin;
-  }
+}
 
-  .box{
+.box {
     height: 18vmin;
     width: 18vmin;
     border-radius: 1rem;
     border: none;
-    box-shadow: 0 0 1rem rgba(0,0,0,0.3);
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
     font-size: 8vmin;
     color: #63458A;
     background-color: #E4B7E5;
 
-    
-  }
 
-  #reset-btn {
-    padding: 1rem ;
+}
+
+#reset-btn {
+    padding: 1rem;
     font-size: 1.25rem;
-    background-color: #191913 ;
+    background-color: #191913;
     color: #ffffff;
     border-radius: 1rem;
     border: none;
-  }
+}
 
-  #new-btn {
+#new-btn {
     padding: 1rem;
     font-size: 1.25rem;
     background-color: #191913;
     color: #fff;
     border-radius: 1rem;
     border: none;
-  }
-  
-  #msg {
+}
+
+#msg {
     color: #ffffc7;
     font-size: 5vmin;
-  }
+}
 
 
 
-
-  .msg-container {
-    height: 100vmin;
+.msg-container {
+    position: fixed;
+    /* Make it fixed to cover the screen */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Add a semi-transparent background */
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 4rem;
-  }
-  
+    z-index: 1000;
+    /* Ensure it's above all other elements */
+}
 
-  .hide {
+
+.hide {
     display: none;
-  }
+}
+
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #e0e0e0;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+    font-weight: normal;
+}
+
+h3 b {
+    color: #bbbefe;
+    /* Gold color for emphasis */
+    font-weight: bold;
+
+}
+
+@media (max-width: 768px) {
+    .game {
+        height: 70vmin;
+        width: 70vmin;
+        gap: 1vmin;
+    }
+
+    .box {
+        height: 20vmin;
+        width: 20vmin;
+        font-size: 6vmin;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+    }
+
+    #msg {
+        font-size: 4vmin;
+    }
+}
+
+@media (max-width: 480px) {
+    .game {
+        height: 80vmin;
+        width: 80vmin;
+        gap: 0.5vmin;
+    }
+
+    .box {
+        height: 22vmin;
+        width: 22vmin;
+        font-size: 5vmin;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    #reset-btn,
+    #new-btn {
+        padding: 0.8rem;
+        font-size: 1rem;
+    }
+
+    #msg {
+        font-size: 3.5vmin;
+    }
+}
